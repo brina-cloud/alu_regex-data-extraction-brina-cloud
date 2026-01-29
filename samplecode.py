@@ -60,6 +60,18 @@ for time in times:
 
 
 
+def hide_email(email):
+    """ hide some parts of the email for privacy """
+    parts = email.split('@')
+    local = parts[0]
+    domain = parts[1]
+    if len(local) <= 2:
+        hidden_local = local[0] + '*' * (len(local) - 1)
+    elif len(parts) != 2:
+        return email
+    else:
+        hidden_local = local[0] + '*' * (len(local) - 2) + local[-1]
+    return hidden_local + '@' + domain
 
 
 
