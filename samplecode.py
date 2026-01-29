@@ -10,20 +10,59 @@ with open('sampleinput.txt', 'r') as f:
 """ Risky patterns to look for """
 wrong_pattern = ['<script>', '</script>', 'javascript:', 'onload=', 'onclick=', 'onerror=', 'select *', 'insert into', 'delete from', 'update set', 'drop']
 
-""" Regex patterns for phone numbers, email addresses, hashtags, and time formats """
-phone_number_pattern = r'^[0-9]{10}$'
-""" """
-email_address_pattern = r'^[a-zA-z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-hash_tag_pattern = r'#\w+'
-time_pattern = r'\b\d{1,2}:\d{2}(?:\s*(?:AM|PM))?\b'
-
+""" remove risky patterns from a raw data """
 def security(word):
     """ Check if a word contains any risky patterns and return false """
-    word_lower = re.findall
+    word = re.findall(pattern, data, re.IGNORECASE)
     for pattern in wrong_pattern:
-        if pattern in word_lower:
+        if pattern in word:
             return False
     return True
+
+
+""" Regex patterns for phone numbers, email addresses, hashtags, and time formats """
+""" finds a match for a 10-digit phone number """
+phone_number_pattern = r'^[0-9]{10}$'
+phone_number_val = []
+phone_numeber = re.findall(phone_number_pattern, data)
+for number in phone_numeber:
+    if security(number):
+        phone_number_val.append(number)
+        
+
+
+""" finds a match for a standard email address format with alphanumeric characters, dots, underscores, percent signs, plus signs, and hyphens before the "@" symbol, followed by a domain name and a top-level domain """
+email_address_pattern = r'^[a-zA-z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+email_address_val = []
+email_addresses = re.findall(email_address_pattern, data)
+for email in email_addresses:
+    if security(email):
+        email_address_val.append(email)
+        
+
+
+""" finds a match for hashtags starting with # followed by alphanumeric characters and underscores """
+hash_tag_pattern = r'#\w+'
+hash_tag_val = []
+hash_tags = re.findall(hash_tag_pattern, data)
+for tag in hash_tags:
+    if security(tag):
+        hash_tag_val.append(tag)
+
+
+""" finds a match for time formats like HH:MM or HH:MM AM/PM """
+time_pattern = r'\b\d{1,2}:\d{2}(?:\s*(?:AM|PM))?\b'
+time_val = []
+times = re.findall(time_pattern, data)
+for time in times:
+    if security(time):
+        time_val.append(time)
+
+
+
+
+
+
 
 
 
