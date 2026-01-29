@@ -38,7 +38,7 @@ email_addresses = re.findall(email_address_pattern, data)
 for email in email_addresses:
     if security(email):
         email_address_val.append(email)
-        
+
 
 
 """ finds a match for hashtags starting with # followed by alphanumeric characters and underscores """
