@@ -1,0 +1,28 @@
+Hello Support Team,
+
+Please contact me using the details below.
+
+Email: Alice.Smith@Example.com
+aliceeee@COM
+Backup email: admin_user99@company.co.uk
+
+Phone numbers:
+- Office: (123) 456-7890
+- Personal: 123-456-7890
+-nonumber: (675) 569-7890
+- Old number: 1234567 (inactive)
+
+Meeting schedule:
+• Morning call at 09:30
+• Afternoon sync at 2:45 PM
+• Late review at 25:90 (invalid)
+
+Social media tags:
+#WebDev #JavaScript #ALU2025 #2025Goals
+
+WARNING:
+<script>alert("xss")</script>
+DROP TABLE users;
+
+Regards,
+Alice
