@@ -59,7 +59,7 @@ for time in times:
         time_val.append(time)
 
 
-
+"""  function to write the extracted data to a new text file with some parts hidden for privacy """
 def hide_email(email):
     """ hide some parts of the email for privacy """
     parts = email.split('@')
@@ -73,6 +73,21 @@ def hide_email(email):
         hidden_local = local[0] + '*' * (len(local) - 2) + local[-1]
     return hidden_local + '@' + domain
 
+
+with open('sampleoutput.txt', 'w') as f:
+    f.write("Phone Numbers:\n")
+    for number in phone_number_val:
+        f.write(number + "\n")
+    f.write("\nEmail Addresses:\n")
+    for email in email_address_val:
+        f.write(hide_email(email) + "\n")
+    f.write("\nHashtags:\n")
+    for tag in hash_tag_val:
+        f.write(tag + "\n")
+    f.write("\nTimes:\n")
+    for time in time_val:
+        f.write(time + "\n")
+print("Data extraction complete. Check 'sampleoutput.txt' for results.")
 
 
 
