@@ -13,8 +13,8 @@ A small utility for extracting commonly-used data types (emails, phone numbers, 
 ## Files
 
 - `sampleinput.txt` — realistic raw input log used for testing and demonstration.
-- `samplecode.py` — extraction script (reads `sampleinput.txt`, extracts patterns, masks emails, and writes `sampleoutput.txt`).
-- `sampleoutput.txt` — generated output from `samplecode.py`.
+- `samplecode.py` — extraction script (reads `sampleinput.txt`, extracts patterns, masks emails, and writes `sampleoutput.json`).
+- `sampleoutput.json` — generated output from `samplecode.py`.
 
 ---
 
@@ -39,7 +39,7 @@ A small utility for extracting commonly-used data types (emails, phone numbers, 
 python samplecode.py
 ```
 
-3. Check `sampleoutput.txt` for extracted results.
+3. Check `sampleoutput.json` for extracted results.
 
 ---
 
