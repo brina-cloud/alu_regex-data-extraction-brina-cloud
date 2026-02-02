@@ -14,7 +14,7 @@ A small utility for extracting commonly-used data types (emails, phone numbers, 
 
 - `sampleinput.txt` — realistic raw input log used for testing and demonstration.
 - `samplecode.py` — extraction script (reads `sampleinput.txt`, extracts patterns, masks emails, and writes `sampleoutput.json`).
-- `sampleoutput.json` — generated output from `samplecode.py`.
+- `sampleoutput.json` — generated output from `samplecode.py` in printed lists js.
 
 ---
 
